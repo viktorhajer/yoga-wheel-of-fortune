@@ -1,0 +1,15 @@
+canvas {
+  filter: blur(3px);
+  transition: all 300ms ease-in-out;
+
+  &.no-blur {
+    filter: none;
+  }
+
+  &.pointer {
+    cursor: pointer;
+  }
+}
+
+
+
