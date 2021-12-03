@@ -3,6 +3,7 @@ export class SpinnerModel {
 }
 
 export class SpinnerOptionModel {
-  color: string = '';
-  label: string = '';
+  color = '';
+  label = '';
+  level = 1;
 }

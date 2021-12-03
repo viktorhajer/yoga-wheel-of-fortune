@@ -1,6 +1,8 @@
 canvas {
   filter: blur(3px);
   transition: all 300ms ease-in-out;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 
   &.no-blur {
     filter: none;

@@ -21,8 +21,7 @@ export class SpinnerComponent implements OnInit {
   private arc = 0;
 
   ngOnInit() {
-    this.arc = Math.PI / (this.data.options.length / 2);
-    setTimeout(() => this.draWheel(), 50);
+    setTimeout(() => this.refresh(), 50);
   }
 
   spin() {
@@ -40,7 +39,8 @@ export class SpinnerComponent implements OnInit {
     return this.spinning;
   }
 
-  private draWheel() {
+  refresh() {
+    this.arc = Math.PI / (this.data.options.length / 2);
     const canvas = document.getElementById('wheelcanvas') as HTMLCanvasElement;
     if (canvas.getContext) {
       const outsideRadius = this.size / 2 - 10;
@@ -64,6 +64,10 @@ export class SpinnerComponent implements OnInit {
         ctx.fill();
 
         ctx.save();
+        ctx.shadowOffsetX = -1;
+        ctx.shadowOffsetY = -1;
+        ctx.shadowBlur    = 0;
+        ctx.shadowColor   = "rgba(255,255,255, 0.3)";
         ctx.fillStyle = this.color;
         ctx.translate(this.size / 2 + Math.cos(angle + this.arc / 2) * textRadius, this.size / 2 + Math.sin(angle + this.arc / 2) * textRadius);
         ctx.rotate(angle + this.arc / 2);
@@ -101,7 +105,7 @@ export class SpinnerComponent implements OnInit {
     }
     const spinAngle = spinAngleStart - this.easeOut(spinTime, 0, spinAngleStart, spinTimeTotal);
     this.startAngle += (spinAngle * Math.PI / 180);
-    this.draWheel();
+    this.refresh();
     this.spinTimeout = setTimeout(() => this.rotateWheel(spinAngleStart, spinTime, spinTimeTotal), 15);
   }
 

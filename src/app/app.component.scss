@@ -1,5 +1,24 @@
+.content {
+  padding: 10px 20px;
+
+  .level-container {
+    display: flex;
+    align-items: center;
+
+    .slider {
+      width: 100%;
+    }
+  }
+
+  p {
+    span {
+      font-weight: bold;
+    }
+  }
+
+}
+
 app-spinner {
-  position: fixed;
-  top: calc(100vh / 2 - 400px / 2);
-  left: calc(100vw / 2 - 400px / 2);
+  position: relative;
+  left: calc(100vw / 2 - 380px / 2);
 }
