@@ -1,8 +1,7 @@
 <div class="content">
   <h2>Fejtájékra ható ászanák</h2>
-  <p>Ászana:<span> {{ value ? value : '-' }}</span></p>
   <div class="level-container">
-    <label>Szint: </label>
+    <label>Maximális szint: </label>
     <mat-slider class="slider" [max]="8" [min]="1" [step]="1" [thumbLabel]="true" (change)="changeLevel()"
                 [(ngModel)]="level">
     </mat-slider>
@@ -10,6 +9,7 @@
 
 </div>
 
-
 <app-spinner #spinnerFirst (stopped)="stopped($event)" [size]="380" [data]="getData()"
              [color]="'#000000'"></app-spinner>
+
+<h2> {{ value ? value : '' }}</h2>

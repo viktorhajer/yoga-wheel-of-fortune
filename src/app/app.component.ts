@@ -11,7 +11,7 @@ export class AppComponent {
 
   @ViewChild('spinnerFirst') spinnerFirst: SpinnerComponent | undefined;
   value = '';
-  level = 5;
+  level = 8;
 
   options = [
     { color: '#B8D430', label: 'Shashankasana', level: 1 },

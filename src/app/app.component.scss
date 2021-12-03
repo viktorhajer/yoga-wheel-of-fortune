@@ -4,21 +4,22 @@
   .level-container {
     display: flex;
     align-items: center;
+    margin-top: 50px;
 
+    label {
+      white-space: nowrap;
+    }
     .slider {
       width: 100%;
     }
   }
-
-  p {
-    span {
-      font-weight: bold;
-    }
-  }
-
 }
 
 app-spinner {
   position: relative;
-  left: calc(100vw / 2 - 380px / 2);
+  left: 0;
+}
+
+h2 {
+  text-align: center;
 }
