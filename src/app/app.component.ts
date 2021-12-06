@@ -1,6 +1,5 @@
-import {Component, ViewChild} from '@angular/core';
-import {SpinnerComponent} from './components/spinner/spinner.component';
-import {SpinnerModel} from './model/spinner.model';
+import {Component} from '@angular/core';
+import {DialogService} from './services/dialog.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +7,6 @@ import {SpinnerModel} from './model/spinner.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  @ViewChild('spinnerFirst') spinnerFirst: SpinnerComponent | undefined;
-  value = '';
-  level = 8;
 
   options = [
     { color: '#B8D430', label: 'Shashankasana', level: 1 },
@@ -28,15 +23,11 @@ export class AppComponent {
     { color: '#FEF200', label: 'Yoga Mudra', level: 4 }
   ];
 
-  changeLevel() {
-    setTimeout(() => this.spinnerFirst?.refresh(), 100);
+  constructor(private readonly dialogService: DialogService) {
   }
 
-  stopped(text: string) {
-    this.value = text;
+  open() {
+    this.dialogService.open({options: this.options});
   }
 
-  getData(): SpinnerModel {
-    return { options: this.options.filter(o => o.level <= this.level)};
-  }
 }

@@ -1,25 +1,5 @@
-.content {
-  padding: 10px 20px;
-
-  .level-container {
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
-
-    label {
-      white-space: nowrap;
-    }
-    .slider {
-      width: 100%;
-    }
-  }
-}
-
-app-spinner {
-  position: relative;
-  left: 0;
-}
-
-h2 {
-  text-align: center;
+app-circle-button {
+  position: fixed;
+  top: 300px;
+  left: 300px;
 }

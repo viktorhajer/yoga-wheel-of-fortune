@@ -1,12 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --spinner_c01: #B8D430;
+  --spinner_c02: #3AB745;
+  --spinner_c03: #20a39b;
+  --spinner_c04: #41afd9;
+  --spinner_c05: #6361bb;
+  --spinner_c06: #a375bb;
+  --spinner_c07: #CC0071;
+  --spinner_c08: #F80120;
+  --spinner_c09: #F35B20;
+  --spinner_c10: #FB9A00;
+  --spinner_c11: #FFCC00;
+  --spinner_c12: #FEF200;
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 body { display: flex; flex-flow: row; }
 
-
-// Always display slider value
 .mat-slider-thumb-label {
   transform: rotate(45deg) !important;
   border-radius: 50% 50% 0 !important;
@@ -16,4 +27,16 @@ body { display: flex; flex-flow: row; }
 }
 .mat-slider-thumb-label-text {
   opacity: 1 !important;
+}
+.full-modal {
+  .mat-dialog-container {
+    padding: 0;
+  }
+}
+@media (max-width: 900px) {
+  .full-modal {
+    max-width: unset !important;
+    width: 100%;
+    height: 100%;
+  }
 }
