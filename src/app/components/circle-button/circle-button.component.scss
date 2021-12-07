@@ -1,7 +1,7 @@
-$circle-color-0: #dbde87;
-$circle-color-1: #59913b;
-$circle-color-2: #dbde87;
-$text-color: #444444;
+$circle-color-0: #59a6b5;
+$circle-color-1: #789aa0;
+$circle-color-2: #215a64;
+$text-color: #ffffff;
 
 @keyframes active-box {
   0% {
@@ -32,8 +32,18 @@ $text-color: #444444;
     position: absolute;
     width: 150px;
     font-weight: 500;
-    top: -20px;
-    left: 20px;
+
+    &.left {
+      top: -5px;
+      left: 30px;
+      text-align: left;
+    }
+
+    &.right {
+      top: 0px;
+      right: 30px;
+      text-align: right;
+    }
   }
 }
 

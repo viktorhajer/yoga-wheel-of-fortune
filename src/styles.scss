@@ -16,7 +16,7 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-body { display: flex; flex-flow: row; }
+body { display: flex; flex-flow: row; background: linear-gradient(#66b095, #80c09a, #3990cb, #0a2c59); }
 
 .mat-slider-thumb-label {
   transform: rotate(45deg) !important;

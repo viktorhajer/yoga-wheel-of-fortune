@@ -1,3 +1,19 @@
+
+.content {
+  color: #ffffff;
+  text-shadow: 3px 2px 3px rgb(0 0 0 / 12%);
+  padding: 40px;
+
+  h1 {
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 2px;
+  }
+  p {
+    max-width: 500px;
+  }
+}
+
 app-circle-button {
   position: fixed;
   top: 300px;

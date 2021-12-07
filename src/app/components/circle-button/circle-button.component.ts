@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-circle-button',
@@ -6,5 +6,5 @@ import {Component} from '@angular/core';
   styleUrls: ['./circle-button.component.scss']
 })
 export class CircleButtonComponent {
-
+  @Input() direction = 'left';
 }
