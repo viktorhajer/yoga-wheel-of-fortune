@@ -10,13 +10,15 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatDialogModule} from '@angular/material/dialog';
 import {AsanaDialogComponent} from './components/asana-dialog/asana-dialog.component';
 import {CircleButtonComponent} from './components/circle-button/circle-button.component';
+import {HandComponent} from './components/hand/hand.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SpinnerComponent,
     AsanaDialogComponent,
-    CircleButtonComponent
+    CircleButtonComponent,
+    HandComponent
   ],
   imports: [
     CommonModule,
